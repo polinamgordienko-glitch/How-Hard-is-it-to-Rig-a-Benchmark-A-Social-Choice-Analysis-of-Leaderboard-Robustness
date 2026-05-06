@@ -9,10 +9,10 @@ Option B.
 
 1. Download the HELM MMLU raw results (v1.0.0) from the public crfm-helm-public bucket in the Google Cloud Storage (GCS) by completing the following two steps:
 
-1.1.	Install the Google Cloud CLI (gcloud) by following Google’s official instructions: 
+  1.1.	Install the Google Cloud CLI (gcloud) by following Google’s official instructions: 
 https://docs.cloud.google.com/sdk/docs/install-sdk.
 
-1.2.	Download HELM MMLU raw results by following the official HELM instructions:
+  1.2.	Download HELM MMLU raw results by following the official HELM instructions:
 https://crfm-helm.readthedocs.io/en/latest/downloading_raw_results/.
 
 After downloading via Option A or B, the code expects the HELM MMLU results to be placed in a folder structure that looks like this (schematically):
@@ -31,9 +31,9 @@ The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run director
 2. Download the BBH data from the Hugging Face Open LLM Leaderboard. Note that the paper uses the data downloaded on April 18, 2026.
 
 
-2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
+  2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
 
-2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell.
+  2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell.
 
 ```text
 python -m pip install huggingface_hub pandas pyarrow
