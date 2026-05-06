@@ -28,7 +28,8 @@ helm_mmlu/
 ```
 The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run directories (each a run id), and each run directory should contain at least run_spec.json and stats.json.
 
-2. Download the BBH data from the Hugging Face Open LLM Leaderboard.
+2. Download the BBH data from the Hugging Face Open LLM Leaderboard. Note that the paper uses the data downloaded on April 18, 2026.
+
 
 2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
 
@@ -37,6 +38,6 @@ The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run director
 python -m pip install huggingface_hub pandas pyarrow
 
 export HF_TOKEN="YOUR_TOKEN"   # macOS/Linux
-# Windows PowerShell: $env:HF_TOKEN="YOUR_TOKEN"
+$env:HF_TOKEN="YOUR_TOKEN" # Windows PowerShell
 
 python download_bbh.py
