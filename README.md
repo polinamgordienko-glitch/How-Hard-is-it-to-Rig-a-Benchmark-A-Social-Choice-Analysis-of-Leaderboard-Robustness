@@ -33,7 +33,7 @@ The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run director
 
   2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
 
-  2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell.
+  2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell. The extraction script `download_bbh.py` is included in this repository. It downloads the public Open LLM Leaderboard results dataset, extracts BBH subtasks using `acc_norm,none` and writes `bbh_scores.csv`.
 
 ```text
 python -m pip install huggingface_hub pandas pyarrow
