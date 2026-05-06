@@ -35,9 +35,9 @@ The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run director
 
 2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell.
 
+```text
 python -m pip install huggingface_hub pandas pyarrow
-
-export HF_TOKEN="YOUR_TOKEN"   # macOS/Linux
-$env:HF_TOKEN="YOUR_TOKEN" # Windows PowerShell
-
+export HF_TOKEN="YOUR_TOKEN"   #macOS/Linux
+$env:HF_TOKEN="YOUR_TOKEN" #Windows PowerShell
 python download_bbh.py
+```
