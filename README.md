@@ -33,7 +33,6 @@ https://crfm-helm.readthedocs.io/en/latest/downloading_raw_results/.
 mkdir -p ~/bbh_analysis
 cd ~/bbh_analysis
 
-```text
 python -m pip install huggingface_hub pandas pyarrow
 export HF_TOKEN="YOUR_TOKEN"   #macOS/Linux
 $env:HF_TOKEN="YOUR_TOKEN" #Windows PowerShell
