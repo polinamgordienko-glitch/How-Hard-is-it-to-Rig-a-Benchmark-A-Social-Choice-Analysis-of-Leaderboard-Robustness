@@ -22,6 +22,28 @@ https://docs.cloud.google.com/sdk/docs/install-sdk.
   1.2.	Download HELM MMLU raw results by following the official HELM instructions:
 https://crfm-helm.readthedocs.io/en/latest/downloading_raw_results/.
 
+2. Download the BBH data from the Hugging Face Open LLM Leaderboard. Note that the paper uses the data downloaded on April 18, 2026.
+
+
+  2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
+
+  2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell. The extraction script `download_bbh.py` is included in this repository. It downloads the public Open LLM Leaderboard results dataset, extracts BBH subtasks using `acc_norm,none` and writes `bbh_scores.csv`. The R script expects this file to be located at `~/bbh_analysis/bbh_scores.csv`. Therefore, create this directory and run the download script from inside it:
+
+```bash
+mkdir -p ~/bbh_analysis
+cd ~/bbh_analysis
+
+```text
+python -m pip install huggingface_hub pandas pyarrow
+export HF_TOKEN="YOUR_TOKEN"   #macOS/Linux
+$env:HF_TOKEN="YOUR_TOKEN" #Windows PowerShell
+python download_bbh.py
+```
+On  Windows PowerShell, set the token with:
+```text
+$env:HF_TOKEN="YOUR_TOKEN"
+```
+
 After downloading via Option A or B, the code expects the HELM MMLU results to be placed in a folder structure that looks like this (schematically):
 
 ```text
@@ -34,17 +56,7 @@ helm_mmlu/
       ...
 ```
 The key point is: under helm_mmlu/runs/v1.0.0/ there should be many run directories (each a run id), and each run directory should contain at least run_spec.json and stats.json.
-
-2. Download the BBH data from the Hugging Face Open LLM Leaderboard. Note that the paper uses the data downloaded on April 18, 2026.
-
-
-  2.1 First, you will require a Hugging Face token, which can be obtained, following the instructions under the following link: https://huggingface.co/docs/hub/security-tokens
-
-  2.2 Then, you can run  the following commands in a command-line shell. On macOS/Linux this can be Terminal; on Windows this can be PowerShell. The extraction script `download_bbh.py` is included in this repository. It downloads the public Open LLM Leaderboard results dataset, extracts BBH subtasks using `acc_norm,none` and writes `bbh_scores.csv`.
-
+For BBH,if you download the BBH data manually instead, save it as:
 ```text
-python -m pip install huggingface_hub pandas pyarrow
-export HF_TOKEN="YOUR_TOKEN"   #macOS/Linux
-$env:HF_TOKEN="YOUR_TOKEN" #Windows PowerShell
-python download_bbh.py
+~/bbh_analysis/bbh_scores.csv
 ```
