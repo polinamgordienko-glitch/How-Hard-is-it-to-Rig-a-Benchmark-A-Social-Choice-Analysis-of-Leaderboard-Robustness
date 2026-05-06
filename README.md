@@ -1,5 +1,12 @@
 # How Hard is it to Rig a Benchmark? A Social Choice Analysis of Leaderboard Robustness
-This repository contains the code to reproduce all experiments in our paper titled "How Hard is it to Rig a Benchmark? A Social Choice Analysis of Leaderboard Robustness". 
+
+## Introduction
+
+This repository contains the code to reproduce all experiments in our paper titled "How Hard is it to Rig a Benchmark? A Social Choice Analysis of Leaderboard Robustness". Starting from MMLU and BBH model scores, the code constructs complete score matrices, computes instance-level robustness under arithmetic mean, median, mean win rate and pairwise majority and runs all sensitivity analyses. 
+
+The code was tested with R version 4.4.2 on macOS Sequoia 15.7.3.
+
+## Data
 
 You need access to the MMLU and BBH data. There are two ways to obtain them:
 
